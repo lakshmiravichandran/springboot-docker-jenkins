@@ -4,27 +4,28 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+//import javax.persistence.CascadeType;
+//import javax.persistence.Entity;
+//import javax.persistence.Id;
+//import javax.persistence.OneToOne;
 import java.sql.Timestamp;
 import java.util.UUID;
-@Entity
+
 @Data
 //@NoArgsConstructor
 public class Weather {
-    @Id
     private String id;
     private String city;
     private String description;
     private double humidity;
     private double pressure;
     private double temperature;
-  //  private Wind wind;
+    private Wind wind;
     private Timestamp timestamp;
 
-    public Weather() {
-        this.id = UUID.randomUUID().toString();
-    }
+//    public Weather() {
+//        this.id = UUID.randomUUID().toString();
+//    }
 
 }
 
